@@ -50,13 +50,13 @@ Conforme mencionado, para realizar os teste de uso da aplicação recomenda-se a
 
 Com os dados em mãos, deverá ser feita uma requisição do tipo post para a url: http://localhost:8080/login , que retornará um token (JWT) no corpo da resposta. Este token é válido por 60 minutos (1 hora), sendo necessário efetuar a requisição novamente para autenticá-lo. Supondo que seja feito o login com o usuário ADMIN:
 
-<img src="https://github.com/valmarath/petshop/blob/main/prints/login.JPG?raw=true" width="386" height="300" />
+<img src="https://github.com/valmarath/petshop/blob/main/prints/login.JPG?raw=true" width="514" height="400" />
 
 Uma ressalva é que há uma validação de CPF no momento do login (e na criação de novos usuários/clientes). Logo, um CPF em formato inadequado irá gerar erro. Novos usuários/clientes não podem ser criados com cpf inválido, visto que passam pela mesma verificação (classe [ValidaCPF.java](https://github.com/valmarath/petshop/blob/main/src/main/java/com/petshop/petshopsystem/ValidaCPF.java )).
 
 Com o login efetuado, é possível começar a utilizar a API, sabendo que antes de executar qualquer requisição deverá ser preenchido o campo authorization (tipo Bearer Token) com o Token recebido previamente.
 
-<img src="https://github.com/valmarath/petshop/blob/main/prints/authorization.JPG?raw=true" width="386" height="300" />
+<img src="https://github.com/valmarath/petshop/blob/main/prints/authorization.JPG?raw=true" width="514" height="400" />
 
 Utilizando o usuário "ADMIN" é possível realizar qualquer requisição (GET, POST, PUT, DELETE) e em qualquer uma das rotas estabelecidas. Usuários "CLIENTE" só podem executar GET e PUT, em rotas especificadas habilitadas para os mesmos e que retornaram ou permitirão apenas a edição de seus dados próprios ou de seus pets. Estas rotas seguem um padrão, mas exemplificando para a tabela de pets:
 
