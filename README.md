@@ -64,7 +64,7 @@ Utilizando o usuário "ADMIN" é possível realizar qualquer requisição (GET, 
 - http://localhost:8080/pets-usuario (GET - Retorna pets do usuário logado) (ADMIN e CLIENTE)
 - http://localhost:8080/pets/{id} (GET - Retorna pet por id) (ADMIN)
 - http://localhost:8080/pets (POST - Cria pet novo) (ADMIN)
-- http://localhost:8080/pets (PUT - Altera pet) (ADMIN)
+- http://localhost:8080/pets/{id} (PUT - Altera pet por id) (ADMIN)
 - http://localhost:8080/pets-usuario/{id} (PUT - Altera pet, por id, do usuário logado) (ADMIN e CLIENTE)
 - http://localhost:8080/pets (DELETE - Deleta pet) (ADMIN)
 
